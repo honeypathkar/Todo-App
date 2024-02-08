@@ -26,6 +26,11 @@ h1{
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 ul li span {
     position: absolute;
@@ -142,6 +147,11 @@ hr {
     .logo{
         width: 48px;
     }
+
+    ul li span {
+        top: 5px;
+	    font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 400px){
@@ -170,6 +180,12 @@ hr {
 
     .logo{
         width: 41px;
+    }
+    ul li span {
+        top: 0px;
+        height: 20px;
+        width: 20px;
+        font-size: 15px;
     }
 }
 
