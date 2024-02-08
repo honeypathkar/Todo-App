@@ -4,8 +4,14 @@ ul li {
     padding: 20px 10vw 12px 5vw; /* Updated padding for responsiveness */
     user-select: none;
     cursor: pointer;
-    font-family: cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
+}
+
+.logo{
+    padding-left: 0.5rem/* 8px */;
+    padding-right: 0.5rem/* 8px */;
+    width: 64px;
 }
 
 body {
@@ -39,7 +45,7 @@ p {
     padding-right: 5vw; /* Updated padding for responsiveness */
     padding-top: 10px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 20px;
 }
 
@@ -71,6 +77,7 @@ hr {
     background-color: white;
     color: black;
     flex: 1 1 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .btn {
@@ -97,6 +104,15 @@ hr {
         margin: 10vh 5vw; /* Adjust margin for smaller screens */
         padding: 3vh 5vw; /* Adjust padding for smaller screens */
     }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .logo{
+        width: 56px;
+    }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -118,6 +134,14 @@ hr {
         margin: 5vh 5vw; /* Adjust margin for even smaller screens */
         padding: 2vh 5vw; /* Adjust padding for even smaller screens */
     }
+
+    h1{
+        font-size: 32px;
+    }
+
+    .logo{
+        width: 48px;
+    }
 }
 
 @media only screen and (max-width: 400px){
@@ -138,6 +162,14 @@ hr {
 	.todo-container {
         margin: 3vh 5vw; /* Adjust margin for even smaller screens */
         padding: 1vh 5vw; /* Adjust padding for even smaller screens */
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .logo{
+        width: 41px;
     }
 }
 
@@ -163,7 +195,14 @@ hr {
 
 	.taskbox {
 		padding: 8px;
-		width: fit-content;
-	}
+		width: 150px;
+    }
 
+    h1{
+        font-size: 20px;
+    }
+
+    .logo{
+        width: 36px;
+    }
 }

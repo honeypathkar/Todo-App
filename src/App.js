@@ -67,7 +67,7 @@ useEffect(() => {
     <div className="todo-container">
         <div className="flex">
           <h1>To-Do List</h1>
-          <img src={logo} alt="Logo" className="w-16 px-2" />
+          <img src={logo} alt="Logo" className="logo" />
         </div>
         <br />
         <div className="flex justify-between items-center">
