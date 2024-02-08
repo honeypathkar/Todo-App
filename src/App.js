@@ -66,7 +66,7 @@ useEffect(() => {
     <div>
     <div className="todo-container">
         <div className="flex">
-          <h1 className="text-5xl font-bold text-blue-950 font-serif">To-Do List</h1>
+          <h1>To-Do List</h1>
           <img src={logo} alt="Logo" className="w-16 px-2" />
         </div>
         <br />
