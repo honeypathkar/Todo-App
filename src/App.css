@@ -1,81 +1,112 @@
-User
-ul li{
-	list-style: none;
-	font-size: 22px;
-	padding: 20px 110px 12px 50px;
-	user-select: none;
-	cursor: pointer;
-	font-family: cursive;
-	position: relative;
-
+ul li {
+    list-style: none;
+    font-size: 22px;
+    padding: 20px 10vw 12px 5vw; /* Updated padding for responsiveness */
+    user-select: none;
+    cursor: pointer;
+    font-family: cursive;
+    position: relative;
 }
 
-body{
-	background-image: url(images/todoImage.avif);
-	background-position: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
+body {
+	background-color: rgb(255, 255, 168);
 }
 
-ul li span{
-	position: absolute;
-	right: 0;
-	top: 13px;
-	height: 40px;
-	width: 40px;
-	font-size: 22px;
-	color: #555;
-	line-height: 40px;
-	text-align: center;
-	border-radius: 50%;
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 p {
-
-	text-align: right;
-	padding-right: 30px;
-	padding-top: 10px;
-	font-weight: bold;
-	font-family: cursive;
-
+    text-align: right;
+    padding-right: 5vw; /* Updated padding for responsiveness */
+    padding-top: 10px;
+    font-weight: bold;
+    font-family: cursive;
+	font-size: 20px;
 }
 
-hr{
-	margin-top: 30px;
+hr {
+    margin-top: 3vh; /* Updated margin for responsiveness */
 }
 
 .remain {
-	padding-left: 50px;
+    padding-left: 5vw; /* Updated padding for responsiveness */
 }
 
 .todo-container {
-	margin: 320px 600px 320px 600px;
-	padding: 32px;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0.19);
-	font-size: 1.125rem;
+    margin: 10vh 5vw; /* Updated margin for responsiveness */
+    padding: 3vh 5vw; /* Updated padding for responsiveness */
+    background-color: rgba(0, 0, 0, 0.19);
+    font-size: 1.125rem;
     line-height: 1.75rem;
-	border-radius: 8px;
-	box-shadow: 50px black;
-	color: white;
-	backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px black; /* Updated box-shadow */
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(8px);
 }
 
 .taskbox {
-	padding: 12px;
-	outline: none;
-	border-radius: 9999px;
-	background-color: white;
-	color: black;
-	flex: 1 1 0%;
+    padding: 12px;
+    outline: none;
+    border-radius: 9999px;
+    background-color: white;
+    color: black;
+    flex: 1 1 0%;
 }
 
 .btn {
-	padding-top: 0.75rem/* 12px */;
-    padding-bottom: 0.75rem/* 12px */;
-	width: fit-content;
-	border-radius: 9999px;
-	background-color: antiquewhite;
-	padding-right: 20px;
-	padding-left: 20px;
+    padding: 0.75rem 2vw; /* Updated padding for responsiveness */
+    border-radius: 9999px;
+    background-color: antiquewhite;
+}
+
+@media only screen and (max-width: 768px) {
+    ul li {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        padding: 15px 5vw; /* Adjust padding for smaller screens */
+    }
+
+    p {
+        padding-right: 5vw; /* Adjust padding for smaller screens */
+    }
+
+    .remain {
+        padding-left: 5vw; /* Adjust padding for smaller screens */
+    }
+
+    .todo-container {
+        margin: 10vh 5vw; /* Adjust margin for smaller screens */
+        padding: 3vh 5vw; /* Adjust padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    ul li {
+        font-size: 16px; /* Further reduce font size for smaller screens */
+        padding: 10px 5vw; /* Further adjust padding for smaller screens */
+    }
+
+    p {
+        padding-right: 5vw; /* Further adjust padding for smaller screens */
+		font-size: 15px;
+    }
+
+    .remain {
+        padding-left: 5vw; /* Further adjust padding for smaller screens */
+    }
+
+    .todo-container {
+        margin: 5vh 5vw; /* Adjust margin for even smaller screens */
+        padding: 2vh 5vw; /* Adjust padding for even smaller screens */
+    }
 }
