@@ -3,36 +3,44 @@ import React, { useEffect, useState } from "react";
 import logo from "./images/icon.png";
 
 function App() {
+  //Making state for task
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  //state for complete task
   const [completeTask, setCompleteTask] = useState(0);
+  //state for remain task
   const [remainingTask, setRemainingTask] = useState(0);
 
   useEffect(() => {
     showData();
   }, []); // Load tasks from localStorage on component mount
 
+  //Getting the length of complete task
   useEffect(() => {
     const count = tasks.filter((task) => task.completed).length;
     setCompleteTask(count);
   }, [tasks]);
 
+  //Getting the length of remain task
   useEffect(() => {
     const remain = tasks.filter((task) => !task.completed).length;
     setRemainingTask(remain);
   }, [tasks]);
 
+  //Function for adding task
   const addTask = () => {
+    //if value is empty return alert
     if (inputValue === "") {
       alert("You must write something!");
     } else {
-      const newTasks = [...tasks, { text: inputValue, completed: false }];
+      const newTasks = [...tasks, { text: inputValue, completed: false }]; //else adding task
       setTasks(newTasks);
       saveData([...newTasks]);
     }
     setInputValue("");
   };
 
+  //Toggle task function for check task as completed
   const toggleTask = (index) => {
     const newTasks = [...tasks];
     newTasks[index].completed = !newTasks[index].completed;
@@ -40,6 +48,7 @@ function App() {
     saveData([...newTasks]);
   };
 
+  //Remove task function for removing task
   const removeTask = (index) => {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
@@ -47,10 +56,12 @@ function App() {
     saveData([...newTasks]);
   };
 
+  //Save task in local storage
   const saveData = (tasks) => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   };
 
+  //Showing task from local storage after the page reload
   const showData = () => {
     const storedData = localStorage.getItem("tasks");
     if (storedData) {
@@ -84,6 +95,7 @@ function App() {
               <li
                 key={index}
                 className={task.completed ? "completed" : ""}
+                // changing style of task if task is completed
                 style={{
                   textDecoration: task.completed ? "line-through" : "none",
                   color: task.completed ? "gray" : "",
