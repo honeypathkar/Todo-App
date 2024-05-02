@@ -1,11 +1,15 @@
 ul li {
     list-style: none;
     font-size: 22px;
-    padding: 20px 10vw 12px 5vw; /* Updated padding for responsiveness */
+    padding: 20px 10vw 12px 1vw; /* Updated padding for responsiveness */
     user-select: none;
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
+}
+
+.todoInput{
+    display: flex;
 }
 
 .logo {
@@ -15,7 +19,7 @@ ul li {
 }
 
 body {
-    background-color:   #F9E795;
+    background-color:   #ffde49;
 }
 
 h1 {
@@ -75,7 +79,7 @@ hr {
 }
 
 .taskbox {
-    padding: 12px;
+    /* padding: 12px; */
     outline: none;
     border-radius: 9999px;
     background-color: white;
@@ -84,17 +88,11 @@ hr {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.btn {
-    padding: 0.75rem 2vw; /* Updated padding for responsiveness */
-    border-radius: 9999px;
-    background-color: #F96167;
-    outline: #F9E795;
-}
 
 @media only screen and (max-width: 768px) {
     ul li {
         font-size: 18px; /* Adjust font size for smaller screens */
-        padding: 15px 5vw; /* Adjust padding for smaller screens */
+        padding: 15px 2vw; /* Adjust padding for smaller screens */
     }
 
     p {
@@ -123,7 +121,7 @@ hr {
 @media only screen and (max-width: 576px) {
     ul li {
         font-size: 16px; /* Further reduce font size for smaller screens */
-        padding: 10px 10vw; /* Further adjust padding for smaller screens */
+        padding: 10px 2vw; /* Further adjust padding for smaller screens */
     }
 
     p {
@@ -159,7 +157,7 @@ hr {
         font-size: 15px;
         padding-top: 7px;
         padding-bottom: 7px;
-        padding-left: 7px;
+        /* padding-left: 2px; */
         padding-right: 80px;
     }
 
