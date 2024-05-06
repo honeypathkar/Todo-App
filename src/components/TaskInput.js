@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./Task.css"
-import "../App.css"
+import "../App.css";
 import logo from "../images/icon.png";
+import { useDispatch} from "react-redux";
+import { addTask } from "../store/slices/TaskSlice";
 
-export default function TaskInput(props) {
-    const {inputValue, setInputValue, addTask} = props;
+export default function TaskInput() {
+  // const {inputValue, setInputValue, addTask} = props;
+  const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState("");
+
+  const handleTask = () => {
+    if (inputValue) {
+      dispatch(addTask(inputValue));
+    }
+    setInputValue("");
+  };
+
   return (
     <div>
       <div>
@@ -21,7 +33,11 @@ export default function TaskInput(props) {
             placeholder="Add your task"
             className="taskbox px-5 py-2"
           />
-          <button className="btn btn-outline-dark px-5 py-2" onClick={addTask} style={{borderRadius: "9999px"}}>
+          <button
+            className="btn btn-outline-dark px-5 py-2"
+            onClick={handleTask}
+            style={{ borderRadius: "9999px" }}
+          >
             Add
           </button>
         </div>

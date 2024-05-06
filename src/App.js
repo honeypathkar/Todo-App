@@ -1,12 +1,12 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js"
 
 function App() {
-  //Making state for task
+/*   //Making state for task
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState("");
   //state for complete task
@@ -70,22 +70,22 @@ function App() {
     if (storedData) {
       setTasks(JSON.parse(storedData));
     }
-  };
+  }; */
 
   return (
     <>
       <div className="todo-container">
         <TaskInput
-          addTask={addTask}
-          setInputValue={setInputValue}
-          inputValue={inputValue}
+          // addTask={addTask}
+          // setInputValue={setInputValue}
+          // inputValue={inputValue}
         />
         <TaskList
-          tasks={tasks}
-          toggleTask={toggleTask}
-          removeTask={removeTask}
-          completeTask={completeTask}
-          remainingTask={remainingTask}
+          // tasks={tasks}
+          // toggleTask={toggleTask}
+          // removeTask={removeTask}
+          // completeTask={completeTask}
+          // remainingTask={remainingTask}
         />
       </div>
     </>
