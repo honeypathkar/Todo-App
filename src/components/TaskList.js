@@ -7,20 +7,18 @@ import { removeTask, toggleTask } from "../store/slices/TaskSlice";
 export default function TaskList() {
   const [completeTask, setCompleteTask] = useState(0);
   const [remainingTask, setRemainingTask] = useState(0);
-  const tasks = useSelector((state) => state.tasks);
+  const tasks = useSelector((state) => state.tasks.tasks);
   const dispatch = useDispatch();
 
-  //Getting the length of complete task
   useEffect(() => {
+    //Getting length of complete task
     const count = tasks.filter((task) => task.completed).length;
+    //Getting length of remaining task
+    const remain = tasks.filter((task) => !task.completed).length;
+    setRemainingTask(remain);
     setCompleteTask(count);
   }, [tasks]);
 
-  //Getting the length of remain task
-  useEffect(() => {
-    const remain = tasks.filter((task) => !task.completed).length;
-    setRemainingTask(remain);
-  }, [tasks]);
 
   const handleRemove = (id) => {
     dispatch(removeTask(id));

@@ -34,7 +34,7 @@ export default function TaskInput() {
             className="taskbox px-5 py-2"
           />
           <button
-            className="btn btn-outline-dark px-5 py-2"
+            className="btn btn-outline-dark px-3 py-2"
             onClick={handleTask}
             style={{ borderRadius: "9999px" }}
           >
